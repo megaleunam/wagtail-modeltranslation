@@ -15,15 +15,15 @@ from django.utils.translation import gettext_lazy as _
 from modeltranslation import settings as mt_settings
 from modeltranslation.translator import NotRegistered, translator
 from modeltranslation.utils import build_localized_fieldname, get_language
-from wagtail.admin.edit_handlers import (
+from wagtail.admin.panels import (
     FieldPanel, FieldRowPanel, InlinePanel, MultiFieldPanel, ObjectList,
     RichTextFieldPanel, StreamFieldPanel,
     extract_panel_definitions_from_model_class)
 from wagtail.contrib.routable_page.models import RoutablePageMixin
-from wagtail.core.fields import StreamField, StreamValue
-from wagtail.core.models import Page, Site, SiteRootPath
-from wagtail.core.url_routing import RouteResult
-from wagtail.core.utils import WAGTAIL_APPEND_SLASH
+from wagtail.fields import StreamField, StreamValue
+from wagtail.models import Page, Site, SiteRootPath
+from wagtail.url_routing import RouteResult
+from wagtail.coreutils import WAGTAIL_APPEND_SLASH
 from wagtail.images.edit_handlers import ImageChooserPanel
 from wagtail.search.index import SearchField
 from wagtail.snippets.views.snippets import SNIPPET_EDIT_HANDLERS
